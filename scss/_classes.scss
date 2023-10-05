@@ -1,0 +1,82 @@
+.classes {
+    margin-top: 10rem;
+
+    @include titles;
+
+    .number {
+        position: absolute;   
+        left: 10%;
+        font-size: 20rem;
+        margin-top: -10rem;
+        color: black;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        z-index: 999;
+    }
+
+    .classes-list {
+        margin: 4rem 13rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        row-gap: 2rem;
+        flex-wrap: wrap;
+
+        .class:nth-child(1) {
+            background-image: url(../img/class1.png);
+        }
+        .class:nth-child(2) {
+            background-image: url(../img/class2.png);
+        }
+        .class:nth-child(3) {
+            background-image: url(../img/class3.png);
+        }
+        .class:nth-child(4) {
+            background-image: url(../img/class4.png);
+        }
+
+        .class {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 53rem;
+            height: 50rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 0 3rem 3rem;
+            transition: all ease 500ms;
+
+            &:hover {
+                transform: scale(1.02);
+                border: 1px solid $mainColor;
+            }
+
+            h4 {
+                font-family: $upperFont;
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+
+            button {
+                background-color: $mainColor;
+                padding: 1rem 2rem;
+                border: none;
+                text-transform: uppercase;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 2rem;
+                font-size: 2rem;
+                cursor: pointer;
+                max-width: 13rem;
+    
+                &:hover {
+                    background-color: #666666;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

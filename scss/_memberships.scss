@@ -1,0 +1,100 @@
+.memberships {
+    margin-top: 10rem;
+    @include titles;
+
+    .number {
+        position: absolute;   
+        right: 10%;
+        font-size: 20rem;
+        margin-top: -13rem;
+        color: black;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        z-index: 999;
+    }
+
+    .list {
+        margin: 5rem 13rem;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2rem;
+
+        .membership {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            border: 1px solid $mainColor;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 3rem 1rem;
+            min-width: 30rem;
+            transition: all ease 1000ms;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            h3 {
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: $upperFont;
+                letter-spacing: 3px;
+            }
+
+            img {
+                height: 10rem;
+                width: 10rem;
+            }
+
+            h4 {
+                font-family: $upperFont;
+                font-size: 3rem;
+                font-weight: 400;
+                letter-spacing: 3px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+
+                li {
+                    font-size: 2rem;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    
+                    i {
+                        padding-right: 1rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            button {
+                background-color: $mainColor;
+                padding: 1.5rem 3rem;
+                border: none;
+                text-transform: uppercase;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 2rem;
+                font-size: 2rem;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: #666666;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

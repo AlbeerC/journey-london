@@ -1,0 +1,25 @@
+.stats {
+    margin: 10rem 0;
+    background-color: $mainColor;
+    padding: 2rem 7rem;
+    display: flex;
+    justify-content: space-between;
+
+    .stat {
+        text-align: center;
+        color: #000000;
+        text-transform: uppercase;
+
+        h4 {
+            font-size: 12rem;
+            font-family: $upperFont;
+            letter-spacing: 5px;
+        }
+
+        p {
+            font-size: 3rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            max-width: 20rem;
+        }
+    }
+}

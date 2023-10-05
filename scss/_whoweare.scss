@@ -1,0 +1,33 @@
+.who-we-are {
+    margin-top: 10rem;
+
+    @include titles;
+
+    .number {
+        position: absolute;   
+        left: 10%;
+        font-size: 20rem;
+        margin-top: -10rem;
+        color: black;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .split {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        margin: 4rem 13rem;
+
+        .right {
+
+            p {
+                padding: 1rem 0;
+                font-size: 1.7rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                line-height: 30px;
+            }
+        }
+    }
+}
