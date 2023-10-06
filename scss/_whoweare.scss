@@ -12,6 +12,14 @@
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: #fff;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        z-index: 999;
+
+        @include responsive(pc) {
+            font-size: 10rem;
+            margin: 0;
+            position: static;
+            text-align: center;
+        }
     }
 
     .split {
@@ -20,6 +28,29 @@
         gap: 3rem;
         margin: 4rem 13rem;
 
+        @include responsive(pc) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+        }
+
+        @include responsive(tablet) {
+            gap: 0;
+        }
+
+        .left img {
+
+            @include responsive(pc) {
+                width: 40rem;
+                height: auto;
+            }
+
+            @include responsive(tablet) {
+                display: none;
+            }
+        }
+
         .right {
 
             p {
@@ -27,6 +58,11 @@
                 font-size: 1.7rem;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 line-height: 30px;
+
+                @include responsive(tablet) {
+                    text-align: center;
+                    font-size: 1.4rem;
+                }
             }
         }
     }

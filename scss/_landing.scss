@@ -3,12 +3,30 @@
     display: flex;
     justify-content: space-between;
 
+    @include responsive(pc) {
+        margin: 0;
+    }
+
     .left {
+
+        @include responsive(pc) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/landing-bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            padding: 6rem 0;
+        }
 
         h1 {
             font-size: 7.5rem;
             text-transform: uppercase;
             line-height: 70px;
+
+            @include responsive(pc) {
+                text-align: center;
+                font-size: 5rem;
+            }
 
             span {
                 color: $mainColor;
@@ -27,6 +45,11 @@
             font-size: 2rem;
             cursor: pointer;
 
+            @include responsive(pc) {
+                display: block;
+                margin: 2rem auto;
+            }
+
             &:hover {
                 background-color: #666666;
                 color: #ffffff;
@@ -37,6 +60,10 @@
     .right {
         height: 50rem;
         width: auto;
+
+        @include responsive(pc) {
+            display: none;
+        }
     }
 
     .socials {
@@ -48,6 +75,10 @@
         justify-content: center;
         row-gap: 2rem;
         margin-right: 2rem;
+
+        @include responsive(pc) {
+            display: none;
+        }
 
         i {
             font-size: 2rem;

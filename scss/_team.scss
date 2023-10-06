@@ -13,6 +13,13 @@
         -webkit-text-stroke-color: #fff;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         z-index: 999;
+
+        @include responsive(pc) {
+            font-size: 10rem;
+            margin: 0;
+            position: static;
+            text-align: center;
+        }
     }
 
     .trainers {
@@ -21,6 +28,16 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
         gap: 2rem;
+
+        @include responsive(pc) {
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+        }
+
+        @include responsive(tablet) {
+            grid-template-columns: 1fr;
+            place-items: center;
+        }
 
         .trainer {
             position: relative;

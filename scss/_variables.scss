@@ -19,6 +19,11 @@ $mainColor: #fff500;
             text-align: center;
             font-family: $upperFont;
             letter-spacing: 10px;
+
+            @include responsive(tablet) {
+                font-size: 5rem;
+                letter-spacing: 3px;
+            }
         }
     
         h3 {
@@ -28,6 +33,29 @@ $mainColor: #fff500;
             text-align: center;
             font-family: $upperFont;
             letter-spacing: 10px;
+
+            @include responsive(tablet) {
+                font-size: 3rem;
+                letter-spacing: 3px;
+                margin-top: -4rem;
+            }
+        }
+    }
+}
+
+
+//Mixin responsive
+$pc: 992px;
+$tablet: 768px;
+
+@mixin responsive ($medida) {
+    @if $medida == pc {
+        @media (max-width: $pc) {
+            @content;
+        }
+    } @else if $medida == tablet {
+        @media (max-width: $tablet) {
+            @content;
         }
     }
 }

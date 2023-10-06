@@ -5,6 +5,18 @@
     display: flex;
     justify-content: space-between;
 
+    @include responsive(pc) {
+        padding: 2rem;
+    }
+
+    @include responsive(tablet) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        row-gap: 2rem;
+    }
+
     .stat {
         text-align: center;
         color: #000000;
@@ -14,6 +26,11 @@
             font-size: 12rem;
             font-family: $upperFont;
             letter-spacing: 5px;
+
+            @include responsive(pc) {
+                font-size: 5rem;
+                letter-spacing: 2px;
+            }
         }
 
         p {

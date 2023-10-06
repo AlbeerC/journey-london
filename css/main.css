@@ -36,20 +36,49 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem 0 2rem; }
+  @media (max-width: 992px) {
+    header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      border-bottom: 1px solid #ffffff;
+      position: sticky;
+      left: 0;
+      top: 0;
+      z-index: 99999; } }
+  @media (max-width: 992px) {
+    header .nav-media {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 100%; } }
+  header .nav-media #btnToggle {
+    float: right;
+    display: none; }
+    @media (max-width: 992px) {
+      header .nav-media #btnToggle {
+        display: block; } }
   header img {
     width: 16rem;
     height: auto; }
-  header ul {
+  header .section-list {
     display: flex;
     align-items: center;
     gap: 3rem;
     text-transform: uppercase; }
-    header ul li {
+    @media (max-width: 992px) {
+      header .section-list {
+        flex-direction: column;
+        margin-top: 3rem;
+        gap: 2rem;
+        align-items: flex-start;
+        padding-bottom: 1rem; } }
+    header .section-list li {
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       cursor: pointer; }
-      header ul li:hover {
+      header .section-list li:hover {
         color: #666666; }
-    header ul button {
+    header .section-list button {
       background-color: #fff500;
       padding: 2rem 1rem;
       font-weight: bold;
@@ -58,18 +87,40 @@ header {
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       font-size: 1.7rem;
       cursor: pointer; }
-      header ul button:hover {
+      @media (max-width: 992px) {
+        header .section-list button {
+          display: none; } }
+      header .section-list button:hover {
         background-color: #666666;
         color: #ffffff; }
+
+@media (max-width: 992px) {
+  .d-none {
+    display: none !important; } }
 
 .landing {
   margin: 5rem 13rem;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 992px) {
+    .landing {
+      margin: 0; } }
+  @media (max-width: 992px) {
+    .landing .left {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/landing-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      padding: 6rem 0; } }
   .landing .left h1 {
     font-size: 7.5rem;
     text-transform: uppercase;
     line-height: 70px; }
+    @media (max-width: 992px) {
+      .landing .left h1 {
+        text-align: center;
+        font-size: 5rem; } }
     .landing .left h1 span {
       color: #fff500; }
   .landing .left button {
@@ -83,12 +134,19 @@ header {
     margin-top: 2rem;
     font-size: 2rem;
     cursor: pointer; }
+    @media (max-width: 992px) {
+      .landing .left button {
+        display: block;
+        margin: 2rem auto; } }
     .landing .left button:hover {
       background-color: #666666;
       color: #ffffff; }
   .landing .right {
     height: 50rem;
     width: auto; }
+    @media (max-width: 992px) {
+      .landing .right {
+        display: none; } }
   .landing .socials {
     position: absolute;
     right: 0;
@@ -98,6 +156,9 @@ header {
     justify-content: center;
     row-gap: 2rem;
     margin-right: 2rem; }
+    @media (max-width: 992px) {
+      .landing .socials {
+        display: none; } }
     .landing .socials i {
       font-size: 2rem;
       cursor: pointer; }
@@ -113,6 +174,10 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .who-we-are .titles h2 {
+        font-size: 5rem;
+        letter-spacing: 3px; } }
   .who-we-are .titles h3 {
     font-size: 5rem;
     margin-top: -7rem;
@@ -120,6 +185,11 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .who-we-are .titles h3 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+        margin-top: -4rem; } }
   .who-we-are .number {
     position: absolute;
     left: 10%;
@@ -128,17 +198,44 @@ header {
     color: black;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 999; }
+    @media (max-width: 992px) {
+      .who-we-are .number {
+        font-size: 10rem;
+        margin: 0;
+        position: static;
+        text-align: center; } }
   .who-we-are .split {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     margin: 4rem 13rem; }
+    @media (max-width: 992px) {
+      .who-we-are .split {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem; } }
+    @media (max-width: 768px) {
+      .who-we-are .split {
+        gap: 0; } }
+    @media (max-width: 992px) {
+      .who-we-are .split .left img {
+        width: 40rem;
+        height: auto; } }
+    @media (max-width: 768px) {
+      .who-we-are .split .left img {
+        display: none; } }
     .who-we-are .split .right p {
       padding: 1rem 0;
       font-size: 1.7rem;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       line-height: 30px; }
+      @media (max-width: 768px) {
+        .who-we-are .split .right p {
+          text-align: center;
+          font-size: 1.4rem; } }
 
 .team {
   margin-top: 10rem; }
@@ -149,6 +246,10 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .team .titles h2 {
+        font-size: 5rem;
+        letter-spacing: 3px; } }
   .team .titles h3 {
     font-size: 5rem;
     margin-top: -7rem;
@@ -156,6 +257,11 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .team .titles h3 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+        margin-top: -4rem; } }
   .team .number {
     position: absolute;
     right: 10%;
@@ -166,12 +272,26 @@ header {
     -webkit-text-stroke-color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: 999; }
+    @media (max-width: 992px) {
+      .team .number {
+        font-size: 10rem;
+        margin: 0;
+        position: static;
+        text-align: center; } }
   .team .trainers {
     margin: 4rem 13rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     gap: 2rem; }
+    @media (max-width: 992px) {
+      .team .trainers {
+        grid-template-columns: 1fr 1fr;
+        place-items: center; } }
+    @media (max-width: 768px) {
+      .team .trainers {
+        grid-template-columns: 1fr;
+        place-items: center; } }
     .team .trainers .trainer {
       position: relative;
       transition: transform 0.3s ease; }
@@ -217,6 +337,10 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .classes .titles h2 {
+        font-size: 5rem;
+        letter-spacing: 3px; } }
   .classes .titles h3 {
     font-size: 5rem;
     margin-top: -7rem;
@@ -224,6 +348,11 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .classes .titles h3 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+        margin-top: -4rem; } }
   .classes .number {
     position: absolute;
     left: 10%;
@@ -234,13 +363,23 @@ header {
     -webkit-text-stroke-color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: 999; }
+    @media (max-width: 992px) {
+      .classes .number {
+        font-size: 10rem;
+        margin: 0;
+        position: static;
+        text-align: center; } }
   .classes .classes-list {
     margin: 4rem 13rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     row-gap: 2rem;
     flex-wrap: wrap; }
+    @media (max-width: 992px) {
+      .classes .classes-list {
+        margin: 2rem;
+        gap: 2rem; } }
     .classes .classes-list .class:nth-child(1) {
       background-image: url(../img/class1.png); }
     .classes .classes-list .class:nth-child(2) {
@@ -260,6 +399,10 @@ header {
       justify-content: flex-end;
       padding: 0 0 3rem 3rem;
       transition: all ease 500ms; }
+      @media (max-width: 992px) {
+        .classes .classes-list .class {
+          width: 33rem;
+          height: 30rem; } }
       .classes .classes-list .class:hover {
         transform: scale(1.02);
         border: 1px solid #fff500; }
@@ -289,6 +432,16 @@ header {
   padding: 2rem 7rem;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 992px) {
+    .stats {
+      padding: 2rem; } }
+  @media (max-width: 768px) {
+    .stats {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      row-gap: 2rem; } }
   .stats .stat {
     text-align: center;
     color: #000000;
@@ -297,6 +450,10 @@ header {
       font-size: 12rem;
       font-family: "Bebas Neue", sans-serif;
       letter-spacing: 5px; }
+      @media (max-width: 992px) {
+        .stats .stat h4 {
+          font-size: 5rem;
+          letter-spacing: 2px; } }
     .stats .stat p {
       font-size: 3rem;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -311,6 +468,10 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .memberships .titles h2 {
+        font-size: 5rem;
+        letter-spacing: 3px; } }
   .memberships .titles h3 {
     font-size: 5rem;
     margin-top: -7rem;
@@ -318,6 +479,11 @@ header {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 10px; }
+    @media (max-width: 768px) {
+      .memberships .titles h3 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+        margin-top: -4rem; } }
   .memberships .number {
     position: absolute;
     right: 10%;
@@ -328,12 +494,22 @@ header {
     -webkit-text-stroke-color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: 999; }
+    @media (max-width: 992px) {
+      .memberships .number {
+        font-size: 10rem;
+        margin: 0;
+        position: static;
+        text-align: center; } }
   .memberships .list {
     margin: 5rem 13rem;
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 2rem; }
+    gap: 2rem;
+    flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      .memberships .list {
+        margin: 2rem; } }
     .memberships .list .membership {
       display: flex;
       flex-direction: column;
@@ -397,13 +573,24 @@ footer {
   align-items: center;
   padding: 2rem;
   margin-top: 10rem; }
-  footer .left p:nth-child(2) {
-    padding: 1.5rem 0; }
+  @media (max-width: 992px) {
+    footer {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 2rem; } }
+  footer .left {
+    text-align: center; }
+    footer .left p:nth-child(2) {
+      padding: 1.5rem 0; }
   footer .middle ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: .5rem; }
+    @media (max-width: 992px) {
+      footer .middle ul {
+        align-items: center;
+        gap: 1rem; } }
     footer .middle ul li {
       cursor: pointer; }
       footer .middle ul li:hover {
@@ -420,6 +607,9 @@ footer {
     footer .right .input input {
       padding: 1rem 4rem;
       border: none; }
+      @media (max-width: 992px) {
+        footer .right .input input {
+          padding: 1rem; } }
       footer .right .input input:last-child {
         background-color: #000000;
         color: #ffffff;
