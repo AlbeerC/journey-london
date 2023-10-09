@@ -14,7 +14,9 @@ footer {
     }
 
     .left {
-        text-align: center;
+        @include responsive(pc) {
+            text-align: center;
+        }
 
         p {
             &:nth-child(2) {

@@ -27,12 +27,11 @@
         display: flex;
         justify-content: center;
         align-items: stretch;
-        row-gap: 2rem;
+        gap: 2rem;
         flex-wrap: wrap;
 
         @include responsive(pc) {
             margin: 2rem;
-            gap: 2rem;
         }
 
         .class:nth-child(1) {

@@ -1,3 +1,5 @@
+@import './variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -27,4 +29,20 @@ li {
 a {
     text-decoration: none;
     color: #ffffff;
+}
+.copy {
+    background-color: $mainColor;
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+    padding-top: 1rem;
+
+    a {
+        color: #000000;
+        
+        &:hover {
+            color: red;
+        }
+    }
 }

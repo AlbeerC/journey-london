@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +31,18 @@ li {
 a {
   text-decoration: none;
   color: #ffffff; }
+
+.copy {
+  background-color: #fff500;
+  text-align: center;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: bold;
+  padding-top: 1rem; }
+  .copy a {
+    color: #000000; }
+    .copy a:hover {
+      color: red; }
 
 header {
   background-color: #000000;
@@ -234,8 +248,7 @@ header {
       line-height: 30px; }
       @media (max-width: 768px) {
         .who-we-are .split .right p {
-          text-align: center;
-          font-size: 1.4rem; } }
+          text-align: center; } }
 
 .team {
   margin-top: 10rem; }
@@ -374,12 +387,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    row-gap: 2rem;
+    gap: 2rem;
     flex-wrap: wrap; }
     @media (max-width: 992px) {
       .classes .classes-list {
-        margin: 2rem;
-        gap: 2rem; } }
+        margin: 2rem; } }
     .classes .classes-list .class:nth-child(1) {
       background-image: url(../img/class1.png); }
     .classes .classes-list .class:nth-child(2) {
@@ -578,10 +590,11 @@ footer {
       flex-direction: column;
       justify-content: center;
       row-gap: 2rem; } }
-  footer .left {
-    text-align: center; }
-    footer .left p:nth-child(2) {
-      padding: 1.5rem 0; }
+  @media (max-width: 992px) {
+    footer .left {
+      text-align: center; } }
+  footer .left p:nth-child(2) {
+    padding: 1.5rem 0; }
   footer .middle ul {
     display: flex;
     flex-direction: column;
