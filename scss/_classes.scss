@@ -6,7 +6,7 @@
     .number {
         position: absolute;   
         left: 10%;
-        font-size: 20rem;
+        font-size: 15rem;
         margin-top: -10rem;
         color: black;
         -webkit-text-stroke-width: 3px;
@@ -23,15 +23,16 @@
     }
 
     .classes-list {
-        margin: 4rem 13rem;
+        margin: 4rem 10rem;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: stretch;
         gap: 2rem;
         flex-wrap: wrap;
 
         @include responsive(pc) {
             margin: 2rem;
+            justify-content: center;
         }
 
         .class:nth-child(1) {
@@ -41,7 +42,7 @@
             background-image: url(../img/class2.png);
         }
         .class:nth-child(3) {
-            background-image: url(../img/class3.png);
+            background-image: url(../img/class3.webp);
         }
         .class:nth-child(4) {
             background-image: url(../img/class4.png);
@@ -51,7 +52,7 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
-            width: 53rem;
+            width: 45rem;
             height: 50rem;
             display: flex;
             flex-direction: column;

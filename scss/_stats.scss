@@ -15,6 +15,7 @@
         align-items: center;
         padding: 2rem;
         row-gap: 2rem;
+        display: none;
     }
 
     .stat {
@@ -23,18 +24,18 @@
         text-transform: uppercase;
 
         h4 {
-            font-size: 12rem;
+            font-size: 8rem;
             font-family: $upperFont;
             letter-spacing: 5px;
 
             @include responsive(pc) {
-                font-size: 5rem;
+                font-size: 4rem;
                 letter-spacing: 2px;
             }
         }
 
         p {
-            font-size: 3rem;
+            font-size: 2rem;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             max-width: 20rem;
         }

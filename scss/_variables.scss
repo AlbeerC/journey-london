@@ -7,13 +7,13 @@ $upperFont: 'Bebas Neue', sans-serif;
 
 // Colors
 
-$mainColor: #fff500;
+$mainColor: #ff81e9;
 
 @mixin titles {
 
     .titles {
         h2 {
-            font-size: 11rem;
+            font-size: 9rem;
             color: hsla(0, 0%, 100%, 0.15);
             text-transform: uppercase;
             text-align: center;

@@ -5,8 +5,8 @@
     .number {
         position: absolute;   
         right: 10%;
-        font-size: 20rem;
-        margin-top: -13rem;
+        font-size: 15rem;
+        margin-top: -10rem;
         color: black;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: #fff;
@@ -22,15 +22,16 @@
     }
 
     .list {
-        margin: 5rem 13rem;
+        margin: 5rem 10rem;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: stretch;
         gap: 2rem;
         flex-wrap: wrap;
         
         @include responsive(tablet) {
             margin: 2rem;
+            justify-content: center;
         }
 
         .membership {
@@ -45,8 +46,12 @@
             min-width: 30rem;
             transition: all ease 1000ms;
 
+            @include responsive(tablet) {
+                width: 90%;
+            }
+
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
             h3 {

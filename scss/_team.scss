@@ -6,7 +6,7 @@
     .number {
         position: absolute;   
         right: 10%;
-        font-size: 20rem;
+        font-size: 15rem;
         margin-top: -10rem;
         color: black;
         -webkit-text-stroke-width: 3px;
@@ -23,15 +23,17 @@
     }
 
     .trainers {
-        margin: 4rem 13rem;
+        margin: 4rem 10rem;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-content: center;
-        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        place-items: center;
+        gap: 4rem;
 
         @include responsive(pc) {
             grid-template-columns: 1fr 1fr;
             place-items: center;
+            margin: 2rem;
         }
 
         @include responsive(tablet) {
@@ -49,8 +51,8 @@
 
             .front {
                 img {
-                    width: 25rem;
-                    height: 25rem;
+                    width: 30rem;
+                    height: 30rem;
                     object-fit: cover;
                 }
             }
@@ -59,7 +61,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 30rem;
                 height: 100%;
                 background-color: $mainColor;
                 color: #000000;
@@ -69,6 +71,7 @@
                 align-items: center;
                 opacity: 0;
                 transition: opacity 0.3s ease;
+                cursor: default;
 
                 h3 {
                     font-size: 2.5rem;

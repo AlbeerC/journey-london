@@ -33,7 +33,7 @@ a {
 .copy {
     background-color: $mainColor;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #000000;
     font-weight: bold;
     padding-top: 1rem;
@@ -42,7 +42,7 @@ a {
         color: #000000;
         
         &:hover {
-            color: red;
+            color: rgb(255, 255, 255);
         }
     }
 }
