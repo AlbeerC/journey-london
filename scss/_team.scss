@@ -3,6 +3,11 @@
 
     @include titles;
 
+    @media (min-width: 1401px) {
+        margin: 10rem auto 0 auto;
+        max-width: 140rem;
+    }
+
     .number {
         position: absolute;   
         right: 10%;
@@ -24,21 +29,16 @@
 
     .trainers {
         margin: 4rem 10rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
         justify-content: space-between;
-        place-items: center;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 4rem;
-
-        @include responsive(pc) {
-            grid-template-columns: 1fr 1fr;
-            place-items: center;
-            margin: 2rem;
-        }
+        
 
         @include responsive(tablet) {
-            grid-template-columns: 1fr;
-            place-items: center;
+            justify-content: center;
+            margin: 2rem;
         }
 
         .trainer {
@@ -54,6 +54,11 @@
                     width: 30rem;
                     height: 30rem;
                     object-fit: cover;
+
+                    @include responsive(tablet) {
+                        width: 15rem;
+                        height: 15rem;
+                    }
                 }
             }
 
@@ -72,6 +77,10 @@
                 opacity: 0;
                 transition: opacity 0.3s ease;
                 cursor: default;
+
+                @include responsive(tablet) {
+                    width: 15rem;
+                }
 
                 h3 {
                     font-size: 2.5rem;

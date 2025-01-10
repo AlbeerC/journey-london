@@ -3,6 +3,11 @@
 
     @include titles;
 
+    @media (min-width: 1201px) {
+        margin: 10rem auto 0 auto;
+        max-width: 140rem;
+    }
+
     .number {
         position: absolute;   
         left: 10%;
@@ -52,8 +57,8 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
-            width: 45rem;
-            height: 50rem;
+            width: 45%;
+            height: 45rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;

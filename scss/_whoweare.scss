@@ -3,6 +3,11 @@
 
     @include titles;
 
+    @media (min-width: 1401px) {
+        margin: 10rem auto 0 auto;
+        max-width: 140rem;
+    }
+
     .number {
         position: absolute;   
         left: 10%;
